@@ -1,0 +1,16 @@
+.product-detail {
+  display: flex;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.product-detail img {
+  width: 430px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+}
+
+.detail-contents {
+  padding-top: 50px;
+  padding-left: 50px;
+}

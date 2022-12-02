@@ -16,7 +16,8 @@ function App() {
   const getData = async () => {
     await fetch(url)
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data))
+      .then((err) => console.log(err));
   };
 
   // useCallback and url as dependency
@@ -43,6 +44,31 @@ function App() {
     }
   };
 
+  console.log(products);
+  // delete the quantity of product
+  const handleDelete = (product) => {
+    const exist = cartItems.find((item) => item.id === product.id);
+    if (exist.quantity === 1) {
+      setCartItems(cartItems.filter((item) => item.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...exist, quantity: product.quantity - 1 }
+            : item
+        )
+      );
+    }
+  };
+
+  // remove product from the cart
+  const handleRemove = (product) => {
+    const exist = cartItems.find((item) => item.id === product.id);
+    if (exist) {
+      setCartItems(cartItems.filter((item) => item.id !== product.id));
+    }
+  };
+
   // routes to Home page, each product detail page, cart page
   return (
     <div className='app'>
@@ -56,7 +82,17 @@ function App() {
           }
         ></Route>
         <Route path='/products/:id' element={<ProductItem />}></Route>
-        <Route path='/cart' element={<Cart cartItems={cartItems} />}></Route>
+        <Route
+          path='/cart'
+          element={
+            <Cart
+              cartItems={cartItems}
+              add={handleAddToCart}
+              handleDelete={handleDelete}
+              handleRemove={handleRemove}
+            />
+          }
+        ></Route>
       </Routes>
     </div>
   );

@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 160px;
+}
+
+.navbar-menu {
+  margin: 20px;
+}
+.navbar-menu a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+  font-size: 19px;
+  color: dimgray;
+}

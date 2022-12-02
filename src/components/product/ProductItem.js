@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
+import './ProductItem.css';
+
 export default function ProductItem() {
   // get params for url
   const { id } = useParams();
@@ -28,13 +30,21 @@ export default function ProductItem() {
   // render the item detail
   return (
     <div>
-      <button onClick={() => navigate(-1)}>back</button>
-      <h1>Product Details</h1>
-      <h2>{item.title}</h2>
-      <p>{item.price}</p>
-      <h3>About this product</h3>
-      <p>{item.description}</p>
-      <img src={`${item.image}`} alt={item.title} />
+      <div className='back-button'>
+        <button onClick={() => navigate(-1)}>back</button>
+      </div>
+      <div className='product-detail'>
+        <div>
+          <img src={`${item.image}`} alt={item.title} />
+        </div>
+        <div className='detail-contents'>
+          <h1>Product Details</h1>
+          <h2>{item.title}</h2>
+          <p>${item.price}</p>
+          <h3>About this product</h3>
+          <p>{item.description}</p>
+        </div>
+      </div>
     </div>
   );
 }

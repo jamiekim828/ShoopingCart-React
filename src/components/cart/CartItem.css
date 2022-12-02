@@ -1,0 +1,39 @@
+.cart-items {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.cart-items-header {
+  margin-bottom: 50px;
+}
+
+.cart-items-header div {
+  font-size: 20px;
+}
+
+.cart-list {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 20px;
+  height: 140px;
+}
+
+.cart-list img {
+  width: 100px;
+  margin-right: 50px;
+}
+
+.cart-btn-div {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-title {
+  width: 40%;
+}
+
+.total-div {
+  font-size: 30px;
+  text-align: right;
+}
