@@ -5,6 +5,7 @@ import NavBar from './components/navbar/NavBar';
 import Home from './pages/Home';
 import ProductItem from './components/product/ProductItem';
 import Cart from './pages/Cart';
+import './App.css';
 
 function App() {
   // initial state is empty array

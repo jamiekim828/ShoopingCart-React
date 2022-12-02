@@ -41,6 +41,8 @@
   height: 50px;
   font-size: 20px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .product-image {
   width: 150px;

@@ -35,8 +35,7 @@
 
 .cart-item-price {
   flex: 1;
-
-  padding-right: 30px;
+  padding-right: 10px;
 }
 
 .cart-quantity {
@@ -52,7 +51,7 @@
 }
 
 .sum-div {
-  flex: 2;
+  flex: 1;
   padding-left: 20px;
 }
 
