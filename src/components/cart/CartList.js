@@ -7,10 +7,11 @@ export default function CartList({
   handleDelete,
   handleRemove,
 }) {
-  // total quantity of the products in the cart
+  // total quantity state of the products in the cart
   const [total, setTotal] = useState(0);
   const quantityArray = cartItems.map((element) => element.quantity);
 
+  // sum qunatity of the each product
   useEffect(() => {
     setTotal(() => quantityArray.reduce((a, b) => a + b));
   }, [quantityArray]);

@@ -15,25 +15,75 @@
   display: flex;
   align-items: center;
   border: 1px solid gray;
-  padding: 20px;
   height: 140px;
+}
+.cart-list-img-div {
+  flex: 1;
+  padding: 20px;
 }
 
 .cart-list img {
-  width: 100px;
+  width: 75px;
   margin-right: 50px;
 }
 
+.cart-item-title {
+  flex: 3;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+.cart-item-price {
+  flex: 1;
+
+  padding-right: 30px;
+}
+
+.cart-quantity {
+  font-weight: 600;
+  width: 20px;
+  text-align: center;
+}
+
 .cart-btn-div {
+  flex: 3;
   display: flex;
   align-items: center;
 }
 
-.cart-item-title {
-  width: 40%;
+.sum-div {
+  flex: 2;
+  padding-left: 20px;
 }
 
 .total-div {
   font-size: 30px;
   text-align: right;
+  margin-bottom: 50px;
+}
+
+.add-btn,
+.delete-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+}
+
+.add-btn:hover,
+.delete-btn:hover {
+  background-color: rgb(193, 192, 192);
+  color: black;
+}
+
+.remove-btn {
+  background-color: rgb(162, 46, 46);
+  color: white;
+}
+
+.remove-btn:hover {
+  background-color: rgb(230, 180, 180);
+  color: black;
 }

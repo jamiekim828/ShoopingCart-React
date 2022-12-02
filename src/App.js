@@ -44,7 +44,6 @@ function App() {
     }
   };
 
-  console.log(products);
   // delete the quantity of product
   const handleDelete = (product) => {
     const exist = cartItems.find((item) => item.id === product.id);
@@ -63,10 +62,7 @@ function App() {
 
   // remove product from the cart
   const handleRemove = (product) => {
-    const exist = cartItems.find((item) => item.id === product.id);
-    if (exist) {
-      setCartItems(cartItems.filter((item) => item.id !== product.id));
-    }
+    setCartItems(cartItems.filter((item) => item.id !== product.id));
   };
 
   // routes to Home page, each product detail page, cart page

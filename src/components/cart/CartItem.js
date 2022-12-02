@@ -19,7 +19,6 @@ export default function CartItem({
     (price, item) => price + item.price * item.quantity,
     0
   );
-  const priceToPay = Math.floor(totalPrice);
 
   return (
     <div className='cart-items'>
@@ -31,24 +30,38 @@ export default function CartItem({
       <div>
         {cartItems.map((product) => (
           <div key={product.id} className='cart-list'>
-            <img
-              src={product.image}
-              alt={product.title}
-              className='cart-list-image'
-            />
-            <div className='cart-item-title'>{product.title}</div>
-            <div>${product.price}</div>
-            <div className='cart-btn-div'>
-              <button onClick={() => handleDelete(product)}>-</button>
-              <div>{product.quantity}</div>
-              <button onClick={() => add(product)}>+</button>
-              <button onClick={() => handleRemove()}>Remove</button>
+            <div className='cart-list-img-div'>
+              <img
+                src={product.image}
+                alt={product.title}
+                className='cart-list-image'
+              />
             </div>
-            <div>${sumPrice(product)}</div>
+            <div className='cart-item-title'>{product.title}</div>
+            <div className='cart-item-price'>${product.price}</div>
+            <div className='cart-btn-div'>
+              <button
+                onClick={() => handleDelete(product)}
+                className='delete-btn'
+              >
+                -
+              </button>
+              <div className='cart-quantity'>{product.quantity}</div>
+              <button onClick={() => add(product)} className='add-btn'>
+                +
+              </button>
+              <button
+                onClick={() => handleRemove(product)}
+                className='remove-btn'
+              >
+                Remove
+              </button>
+            </div>
+            <div className='sum-div'>${sumPrice(product)}</div>
           </div>
         ))}
       </div>
-      <div className='total-div'>Total : ${priceToPay}</div>
+      <div className='total-div'>Total : ${totalPrice}</div>
     </div>
   );
 }
