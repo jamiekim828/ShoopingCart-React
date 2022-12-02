@@ -43,6 +43,7 @@ function App() {
     }
   };
 
+  // routes to Home page, each product detail page, cart page
   return (
     <div className='app'>
       <NavBar />
