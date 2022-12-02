@@ -55,7 +55,7 @@ function App() {
           }
         ></Route>
         <Route path='/products/:id' element={<ProductItem />}></Route>
-        <Route path='/cart' element={<Cart cartItem={cartItems} />}></Route>
+        <Route path='/cart' element={<Cart cartItems={cartItems} />}></Route>
       </Routes>
     </div>
   );

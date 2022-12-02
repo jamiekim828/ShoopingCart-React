@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function CartList({ cartItems }) {
+  console.log('hello', cartItems);
   return (
     <div className='cart-items'>
       <div className='cart-items-header'>Cart Items</div>
