@@ -2,6 +2,14 @@
 
 This assignment is to practice React : passing props, React hook: useState, useEffect and React router
 
+# Deploy Link
+- [Visit the site](https://jamiekim828.github.io/ISA6-React_ShoppingCart)
+
+# Screenshots
+![home](1.png)
+![productdetail](2.png)
+![cart](3.png)
+
 ## How to run project
 
 1. Step 1: yarn
