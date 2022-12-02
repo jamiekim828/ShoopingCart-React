@@ -2,10 +2,10 @@ import React from 'react';
 
 import CartList from '../components/cart/CartList';
 
-export default function Cart() {
+export default function Cart({ cartItems }) {
   return (
     <div>
-      <CartList />
+      <CartList cartItems={cartItems} />
     </div>
   );
 }

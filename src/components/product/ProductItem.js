@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 export default function ProductItem() {
@@ -17,10 +17,13 @@ export default function ProductItem() {
       .then((data) => setItem(data));
   };
 
+  // useCallback and url as dependency
+  const catchData = useCallback(getItem, [url]);
+
   // useEffect call getItem one time
   useEffect(() => {
-    getItem();
-  }, []);
+    catchData();
+  }, [catchData]);
 
   // render the item detail
   return (
