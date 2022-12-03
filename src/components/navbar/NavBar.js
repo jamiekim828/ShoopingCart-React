@@ -5,7 +5,7 @@ import './NavBar.css';
 
 import img from '../../assets/logo.jpeg';
 
-export default function NavBar() {
+export default function NavBar({cartItems}) {
   return (
     <div className='navbar'>
       <div>

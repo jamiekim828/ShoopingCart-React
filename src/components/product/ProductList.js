@@ -18,8 +18,7 @@ export default function ProductList({ products, handleAddToCart }) {
               <Link to={`/products/${p.id}`}>
                 <button>More</button>
               </Link>
-
-              <button onClick={() => handleAddToCart(p)}>+ Add</button>
+              <button onClick={() => {return handleAddToCart(p)}}>+ Add</button>
             </div>
           </div>
         ))}
