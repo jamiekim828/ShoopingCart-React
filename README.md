@@ -2,13 +2,13 @@
 
 This assignment is to practice React : passing props, React hook: useState, useEffect and React router
 
-# Deploy Link
+## Deploy Link
 - [Visit the site](https://jamiekim828.github.io/ISA6-React_ShoppingCart)
 
-# Screenshots
-![home](1.png)
-![productdetail](2.png)
-![cart](3.png)
+## Screenshots
+![home](https://github.com/jamiekim828/ISA6-React_ShoppingCart/blob/main/src/assets/1.png?raw=true)
+![product detail](https://github.com/jamiekim828/ISA6-React_ShoppingCart/blob/main/src/assets/2.png?raw=true)
+![cart](https://github.com/jamiekim828/ISA6-React_ShoppingCart/blob/main/src/assets/3.png?raw=true)
 
 ## How to run project
 
