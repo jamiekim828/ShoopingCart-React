@@ -19,12 +19,13 @@ export default function CartItem({
     (price, item) => price + item.price * item.quantity,
     0
   );
+  
 
   return (
     <div className='cart-items'>
       <div className='cart-items-header'>
         <h1>My Bag</h1>
-        {cartItems.length === 0 && <div>You have not added any items yet.</div>}
+        {!cartItems === 0 && <div>You have not added any items yet.</div>}
         {cartItems.length > 0 && <div>Shipping Total: {total}</div>}
       </div>
       <div>

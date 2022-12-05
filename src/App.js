@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import React, { useCallback, useEffect, useState } from 'react';
 
 import NavBar from './components/navbar/NavBar';
@@ -61,14 +61,11 @@ function App() {
     }
   };
 
-  const navigate = useNavigate();
   // remove product from the cart
   const handleRemove = (product) => {
-    if(cartItems.length > 1) {
+    if(cartItems.length > 0) {
     setCartItems(cartItems.filter((item) => item.id !== product.id));
-  } else {
-    navigate('/')
-  }
+  } 
   };
 
   // routes to Home page, each product detail page, cart page

@@ -86,3 +86,8 @@
   background-color: rgb(230, 180, 180);
   color: black;
 }
+
+.cartisempty {
+  text-align: center;
+  font-size: 25px;
+}
